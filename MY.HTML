@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cartoon Bag Welcome</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Comic Sans MS', cursive;
+}
+
+body{
+  overflow:hidden;
+  height:100vh;
+  background: linear-gradient(135deg,#f6d365,#fda085);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* Logo + Name */
+.top {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.top img { height: 60px; }
+.top span { font-size: 22px; font-weight: bold; color:#fff; text-shadow:1px 1px 4px #000; }
+
+
+  
+/* Welcome text */
+h1 {
+  font-size:60px;
+  font-weight:bold;
+  color:#fff;
+  text-shadow:2px 2px 5px #000;
+  opacity:0;
+  animation: popText 1s ease forwards;
+  animation-delay:2s;
+}
+
+/* Text pop animation */
+@keyframes popText {
+  0% { opacity:0; transform: scale(0.6); }
+  100% { opacity:1; transform: scale(1); }
+}
+
+/* Open button */
+button {
+  margin-top:40px;
+  padding:15px 40px;
+  font-size:20px;
+  border:none;
+  border-radius:25px;
+  background:#00a2ff;
+  color:white;
+  cursor:pointer;
+  opacity:0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay:3.2s;
+}
+
+button:hover { background:#0056b3; }
+
+/* Button pop */
+@keyframes fadeUp {
+  from { opacity:0; transform: translateY(20px); }
+  to { opacity:1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Logo + Name -->
+<div class="top">
+  <img src="IMG_20230625_181114-fotor-bg-remover-20230804211444.png" alt="Logo">
+  <span>~HARSH</span>
+</div>
+
+
+<!-- Welcome Text -->
+<div style="text-align:center; position:absolute; top:35%;">
+  <h1>WELCOME </h1>
+  <button onclick="openSite()">OPEN</button> 
+</div>
+
+<script>
+function openSite(){
+  window.location.href="home.html"; // main website 
+}
+</script>
+
+</body>
+</html>
